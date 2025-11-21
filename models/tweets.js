@@ -5,6 +5,7 @@ const tweetSchema = mongoose.Schema({
     userName: String,
     userTag: String,
     content: String,
+    createdAt: { type: Date, default: Date.now },
 })
 
 module.exports = mongoose.model('tweets', tweetSchema);
